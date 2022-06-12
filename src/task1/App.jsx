@@ -14,5 +14,6 @@ function App() {
         {/*<button onClick={() => setIsModalOpen(true)}>Показать результат</button>*/}
         {isModalOpen === true && <Modal login={login} pass={pass} setIsModalOpen={setIsModalOpen}/>}
     </div>
+
 }
 export default App;
