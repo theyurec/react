@@ -1,13 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+
 import reportWebVitals from './reportWebVitals';
+import Login from "./task1/Login";
+import Password from "./task1/Password";
+import Button from "./task1/Button";
+import Modal from "./task1/Modal";
+import App from "./task1/App";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+      <App />
+      <Button />
+      <Modal />
+
   </React.StrictMode>
 );
 

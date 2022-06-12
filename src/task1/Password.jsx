@@ -1,10 +1,9 @@
-import React, { useState } from 'react';
 
-function Password() {
-    const [password, setPassword] = useState('password')
+
+function Password({pass, setPass}) {
     return <div>
-        <input type="password" onChange={(event) => setPassword(event.target.value)}/>
-        <p>{password}</p>
+        <input type="password" value={pass} onChange={(event) => setPass(event.target.value)}/>
+        <p>{pass}</p>
     </div>
 }
 export default Password;

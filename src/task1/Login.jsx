@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
 
-function Login() {
-    const [login, setLogin] = useState('login')
+
+function Login({login, setLogin}) {
     return <div>
-        <input type="text" onChange={(event) => setLogin(event.target.value)}/>
+        <input type="text" value={login} onChange={(event) => setLogin(event.target.value)}/>
         <p>{login}</p>
     </div>
 }
