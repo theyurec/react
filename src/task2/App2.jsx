@@ -30,14 +30,21 @@ function App2() {
         setList(deleteList)
     }
 
+    const handleChecked =  (id) => (event) => {
+console.log('event', event.target.checked);
+console.log('id', id);
+// как deleteItem
+    }
+
+console.log('list', list)
   return (
     <div className="App">
       <h1>TODOList app</h1>
         <ul>
             {list.map((item) => <li key={item.id || 100}>
-                {<input type="checkbox" checked={notChecked} onChange={() => setNotChecked(!notChecked)} />}
+                {<input type="checkbox" checked={item.status } onChange={handleChecked(item.id)} />}
 
-                {item.status ? 'Выполнен' : 'Не выполнен'}
+                {/* {item.status ? 'Выполнен' : 'Не выполнен'} */}
                 {item.name || ''}
                 {<button onClick={() => deleteItem(item.id)}>delete</button>}
             </li>)}
