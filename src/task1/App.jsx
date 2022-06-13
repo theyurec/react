@@ -7,12 +7,11 @@ function App() {
     const [login, setLogin] = useState('')
     const [pass, setPass] = useState('')
     const [isModalOpen, setIsModalOpen] = useState(false)
-    console.log(isModalOpen === true)
     return <div>
         <Login login={login} setLogin={setLogin}/>
         <Password pass={pass} setPass={setPass}/>
-        {/*<button onClick={() => setIsModalOpen(true)}>Показать результат</button>*/}
-        {isModalOpen === true && <Modal login={login} pass={pass} setIsModalOpen={setIsModalOpen}/>}
+        <button onClick={() => setIsModalOpen(true)}>Показать результат</button>
+        {isModalOpen && <Modal login={login} pass={pass} setIsModalOpen={setIsModalOpen}/>}
     </div>
 
 }
