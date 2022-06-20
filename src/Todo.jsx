@@ -25,7 +25,7 @@ function Todo() {
 
     const deleteAllItem = () => setList([])
 
-    const deleteItem = (id) => {
+    const deleteItem = (id) => () => {
         const deleteList = [...list].filter(item => item.id !== id)
         setList(deleteList)
     }
@@ -44,12 +44,16 @@ function Todo() {
             <h1>TODOList app</h1>
 
             <div>
-                {list.map((item, index) => <div className="todo" key={`${item.id}-${index}`}>
-                    <input type="checkbox" checked={item.status} onChange={handleChecked(item.id)} />
-                    <input placeholder='Введите задачу...' type="text" value={item.name} onChange={handleAddNameTask(item.id)} className={`todo-text ${item.status ? 'todo-completed' : ''}`}/>
-                    <button onClick={() => deleteItem(item.id)}>Х</button>
-                </div>)}
-
+                {list.map(function(item, index) {
+                    return <div className="todo" key={`${item.id}-${index}`}>
+                        <input type="checkbox" checked={item.status} onChange={handleChecked(item.id)}/>
+                        <input placeholder='Введите задачу...' type="text" value={item.name}
+                               onChange={handleAddNameTask(item.id)}
+                               className={`todo-text ${item.status ? 'todo-completed' : ''}`}/>
+                        <button onClick={deleteItem(item.id)}>Х</button>
+                    </div>
+                })
+                }
             </div>
 
             <button type="button" onClick={handleAddNewItem}>Добавить</button><br/>
