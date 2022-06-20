@@ -29,7 +29,6 @@ function Todo() {
         const deleteList = [...list].filter(item => item.id !== id)
         setList(deleteList)
     }
-
     const handleChecked =  (id) => (event) => {
         const result = [...list].map(elem => {
             if(elem.id === id) {
