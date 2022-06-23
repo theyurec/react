@@ -3,12 +3,15 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 
 import reportWebVitals from './reportWebVitals';
-import Todo from "./Todo";
+import App3 from "./task3/App3";
+import StarMaker from "./task3/App3";
+import TaskButton from "./task3/TaskButton";
+import Slider from "./task3/Slider";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-      <Todo />
+      <Slider />
   </React.StrictMode>
 );
 
