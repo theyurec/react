@@ -20,7 +20,7 @@ const Slider = () => {
     console.log(current)
 
     return (
-        <div>
+        <div className="slider">
             {slides.map((elem, index) => {
                return (
                    <div key={index}>
@@ -28,8 +28,10 @@ const Slider = () => {
                    </div>
                    )
             })}
-            <button onClick={prevSlide}>&lt;</button>
-            <button onClick={nextSlide}>&gt;</button>
+            <div className="btn">
+                <button onClick={prevSlide}>&lt;</button>
+                <button onClick={nextSlide}>&gt;</button>
+            </div>
         </div>
     );
 };

@@ -2,5 +2,16 @@
 img {
     width: 300px;
     height: 300px;
-    border: 1px solid black;
+    border-radius: 10px;
+}
+.slider {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.btn button {
+    cursor: pointer;
+    background-color: #0A134C;
+    color: white;
 }

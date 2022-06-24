@@ -7,11 +7,17 @@ import App3 from "./task3/App3";
 import StarMaker from "./task3/App3";
 import TaskButton from "./task3/TaskButton";
 import Slider from "./task3/Slider";
+import List from "./List/List";
+import ListText from "./List/ListText";
+import Card from "./Card/Card";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-      <Slider />
+      <Slider /><hr/>
+      <TaskButton /><hr/>
+      <List/><hr/>
+      <Card />
   </React.StrictMode>
 );
 
