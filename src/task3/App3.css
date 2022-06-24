@@ -1,0 +1,41 @@
+.star {
+    margin: 50px 0;
+    height: 0;
+    width: 0;
+    position: relative;
+    border-right: 50px solid transparent;
+    /*border-bottom: 35px solid #FFFF00;*/
+    border-bottom: 35px solid black;
+    border-left: 50px solid transparent;
+    transform: rotate(35deg);
+}
+.star:before,
+.star:after {
+    content: "";
+    height: 0;
+    width: 0;
+    position: absolute;
+}
+.star:before {
+    top: -26px;
+    left: -32px;
+    border-bottom: 40px solid black;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    transform: rotate(-35deg);
+}
+.star:after {
+    top: 2px;
+    left: -53px;
+    border-right: 50px solid transparent;
+    border-bottom: 35px solid black;
+    border-left: 50px solid transparent;
+    transform: rotate(-70deg);
+}
+.is-active {
+    border-bottom: 35px solid #FFFF00;
+}
+.is-active:before,
+.is-active:after {
+    border-bottom: 35px solid #FFFF00;
+}
