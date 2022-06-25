@@ -4,13 +4,14 @@ import './index.css';
 
 import reportWebVitals from './reportWebVitals';
 
-import TaskButton from "./TaskButton";
+
+import List from "./List/List";
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-      <TaskButton />
+      <List />
   </React.StrictMode>
 );
 
