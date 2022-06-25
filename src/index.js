@@ -4,14 +4,13 @@ import './index.css';
 
 import reportWebVitals from './reportWebVitals';
 
-
-import List from "./List/List";
+import Card from "./Card/Card";
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-      <List />
+      <Card />
   </React.StrictMode>
 );
 
