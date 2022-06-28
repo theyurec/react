@@ -40,7 +40,7 @@ function Todo() {
     }
 
     return (
-        <div className="App">
+        <div className="app">
             <h1>TODOList app</h1>
 
             <div>

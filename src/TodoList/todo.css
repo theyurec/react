@@ -1,4 +1,4 @@
-body {
+.app {
     font-family: 'Teko';
     display: flex;
     align-items: center;
@@ -15,7 +15,7 @@ body {
     background: linear-gradient(to right, #2980B9, #6DD5FA, #FFFFFF);
     color: #fff;
 }
-h1 {
+.app h1 {
     color: #fff;
     text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.6);
     text-align: center;
@@ -24,7 +24,7 @@ h1 {
     line-height: 1.3em;
     font-weight: bold;
 }
-.todo {
+.app.todo {
     background: #fff;
     padding: 3px 10px;
     font-size: .7em;
@@ -34,14 +34,14 @@ h1 {
     justify-content: space-between;
     color: #000;
 }
-.todo-text {
+.app.todo-text {
     cursor: pointer;
 }
 
-.todo-completed {
+.app.todo-completed {
     text-decoration: line-through;
 }
-button {
+.app button {
     border: 0;
     outline: 0;
     cursor: pointer;
@@ -50,11 +50,11 @@ button {
     color: white;
     border-radius: 5px;
 }
-.todo button {
+.app .todo button {
     color: #f37070;
     background: transparent;
 }
-input {
+.app input {
     background: #fff;
     box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
     padding: 7px 10px;
