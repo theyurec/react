@@ -16,29 +16,31 @@ const BlogComponent = () => {
     }
 
     return (
-        <div className="cards">
-            <div className="first-card">
-                <div className="cards-img"></div>
-                <div className="cards_text">
-                    <div className="date">MAR 23, 2022</div>
-                    <h1 className="title">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h1>
-                    <div className="subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci consectetur culpa deleniti dignissimos dolore est, eveniet, excepturi fugiat harum inventore iste iusto labore nulla, praesentium quasi recusandae tempore vel veritatis.</div>
+            <div className="cards">
+                <div className="first-card">
+                    <div className="cards-img"></div>
+                    <div className="cards_text">
+                        <div className="date">MAR 23, 2022</div>
+                        <h1 className="title">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h1>
+                        <div className="subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci consectetur culpa deleniti dignissimos dolore est, eveniet, excepturi fugiat harum inventore iste iusto labore nulla, praesentium quasi recusandae tempore vel veritatis.</div>
+                    </div>
                 </div>
-            </div>
-            <button className={`${count === arr.length ? 'btn-none' : ''}`} onClick={add}>Показать еще</button>
+                <button className={`${count === arr.length ? 'btn-none' : ''}`} onClick={add}>Показать еще</button>
 
-            <div className="mini-cards">
-                {
-                    arr.slice(0, count).map((index) => {
-                        return (
-                            <Card index={index}/>
-                        )
-                    })
-                }
-            </div>
+                <div className="mini-cards">
+                    {
+                        arr.slice(0, count).map((index) => {
+                            return (
+                                <Card index={index}/>
+                            )
+                        })
+                    }
+                </div>
 
-        </div>
+            </div>
     );
+
+
 };
 
 export default BlogComponent;
